@@ -25,7 +25,7 @@ resource "aws_subnet" "public" {
   cidr_block              = cidrsubnet("10.0.0.0/16", 8, count.index)
   map_public_ip_on_launch = true
   availability_zone       = var.azs[count.index]
-  tags = { Name = "ror-public-${count.index}" }
+  tags = { Name = "ror-public-${count.index}" } 
 }
 
 # Private Subnets (for ECS, RDS)
