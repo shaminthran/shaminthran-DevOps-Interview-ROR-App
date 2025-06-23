@@ -3,8 +3,6 @@
 This repository demonstrates the end-to-end CI/CD deployment of a **Ruby on Rails web application** using **AWS ECS Fargate**, **Terraform**, and **GitHub Actions**. 
 It adheres to best DevOps and infrastructure-as-code practices by provisioning a scalable, secure, and modular AWS infrastructure.
 
----
-
 ## Tech Stack
 
 - **Application**: Ruby on Rails
@@ -25,11 +23,6 @@ It adheres to best DevOps and infrastructure-as-code practices by provisioning a
 - **ECS Cluster (Fargate)** with 1 Task running the Rails container
 - **Application Load Balancer (ALB)** in public subnet forwarding to private ECS service
 - **IAM Role** to allow ECS access to pull images and interact with S3
-
----
-
-
----
 
 ## CI/CD Pipeline (GitHub Actions)
 
@@ -69,8 +62,6 @@ After successful deployment, Terraform outputs:
 | S3_REGION_NAME     | S3 region                          |
 | LB_ENDPOINT        | ALB DNS name for app access        |
 
----
-
 ##  How to Deploy (From Scratch)
 
 1. **Fork this repo** into your own GitHub account.
@@ -84,16 +75,12 @@ After successful deployment, Terraform outputs:
    - ECS service is updated with the new image.
 5. **Access the app** via the Load Balancer DNS (Terraform output).
 
----
-
 ##  Testing the Application
 
 1. Open the DNS from `load_balancer_dns` output in a browser.
 2. Confirm Rails app loads.
 3. Test file upload (uses S3).
 4. Confirm database-backed pages load (connected to RDS).
-
----
 
 ##  Clean Up
 
